@@ -1,0 +1,25 @@
+{
+  "name": "sdc_backend_practice",
+  "version": "1.0.0",
+  "description": "sdc_backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server-dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabassegovia/sdc_backend_practice.git"
+  },
+  "author": "sabas segovia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabassegovia/sdc_backend_practice/issues"
+  },
+  "homepage": "https://github.com/sabassegovia/sdc_backend_practice#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
+  }
+}
