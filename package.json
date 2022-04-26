@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sabassegovia/sdc_backend_practice#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3"
