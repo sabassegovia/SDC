@@ -4,7 +4,7 @@ const pool = new Pool({
   host: 'localhost',
   user: 'sabassegovia',
   port: 5432,
-  // password: 'cowspot!',
+  password: 'cowspot!',
   database: 'productsdb'
 })
 
