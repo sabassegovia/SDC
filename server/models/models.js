@@ -4,9 +4,9 @@ db = require('../db/db.js')
 
 const getProducts = (params) => {
   let offset = (params.page - 1) * params.count;
-  console.log(offset);
-  console.log(params)
-  let qString = 'SELECT product_id, name, slogan, description, category, default_price FROM products ORDER BY product_id ASC LIMIT $1 OFFSET $2;';
+  // console.log(offset);
+  // console.log(params)
+  let qString = 'SELECT products.product_id, products.name, products.slogan, products.description, products.category, products.default_price FROM products ORDER BY products.product_id ASC LIMIT $1 OFFSET $2;';
   let values = [params.count, offset];
   return db.query(qString, values);
 }

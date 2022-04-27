@@ -71,10 +71,13 @@ ALTER TABLE related ADD CONSTRAINT related_product_id_fkey FOREIGN KEY (product_
 ALTER TABLE photos ADD CONSTRAINT photos_style_id_fkey FOREIGN KEY (style_id) REFERENCES styles(style_id);
 ALTER TABLE sku ADD CONSTRAINT sku_style_id_fkey FOREIGN KEY (style_id) REFERENCES styles(style_id);
 
-
+--WHERE INDEXING
 CREATE INDEX related_product_id_index ON related(product_id);
 CREATE INDEX features_id_index ON features(product_id);
 CREATE INDEX products_product_id ON products(product_id);
 CREATE INDEX photo_style_id_index ON photos(style_id);
 CREATE INDEX styles_style_id_index ON styles(style_id);
+CREATE INDEX styles_product_id_index ON styles(product_id);
 CREATE INDEX sku_style_id_index ON styles(style_id);
+
+--ON INDEXING

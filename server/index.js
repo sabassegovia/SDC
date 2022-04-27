@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/products', (req, res) => {
-  console.log(req.query);
+  // console.log(req.query);
   let page = req.query.page || 1;
   let count = req.query.count || 5;
   models.getProducts({
@@ -16,10 +16,11 @@ app.get('/products', (req, res) => {
     count: count
   })
   .then((result) => {
-    console.log('back in the server then\n==================\n', result.rows);
+    // console.log('back in the server then\n==================\n', result.rows);
     res.status(200).send(result.rows);
   })
-  .catch((err) => {
+    .catch((err) => {
+      console.log(err);
     console.log('back in the server catch');
     res.status(404).send();
   })
@@ -42,7 +43,7 @@ app.get('/products/:product_id', (req, res) => {
       // console.log(tempInfoObj);
       //for the javascript way
 
-      console.log(response.rows[0]);
+      // console.log(response.rows[0]);
       res.status(200).send(response.rows[0]);
     })
     .catch((err) => {
@@ -60,7 +61,7 @@ app.get('/products/:product_id/styles', (req, res) => {
   })
     .then((response) => {
 
-      console.log(response.rows);
+      // console.log(response.rows);
       //getting data, manually manipulating using JS
       // console.log(response[0]);
       // console.log(response[1]);
@@ -92,12 +93,12 @@ app.get(`/products/:product_id/related`, (req, res) => {
     product_id: id
   })
   .then((result) => {
-    console.log(result.rows);
+    // console.log(result.rows);
     let temp_related_id = [];
     (result.rows).forEach(row => {
       temp_related_id.push(row.related_product_id);
     });
-      console.log(temp_related_id);
+      // console.log(temp_related_id);
 
     res.status(200).send(temp_related_id);
   })
