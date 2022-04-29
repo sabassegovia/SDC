@@ -7,7 +7,6 @@ const pool = new Pool({
   password: 'password',
   database: 'test'
 })
-
 pool.connect((err, res) => {
   if (err) {
     console.log(err);
