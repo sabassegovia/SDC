@@ -28,7 +28,7 @@ app.get('/products', (req, res) => {
 
 
 app.get('/products/:product_id', (req, res) => {
-  console.log(req.params.product_id);
+  // console.log(req.params.product_id);
   let product_id = req.params.product_id;
   models.getProductInformation({
     product_id: product_id
