@@ -1,11 +1,11 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  host: 'localhost',
-  user: 'sabassegovia',
+  host: '54.183.12.42',
+  user: 'test_user',
   port: 5432,
-  password: 'cowspot!',
-  database: 'productsdb'
+  password: 'password',
+  database: 'test'
 })
 
 pool.connect((err, res) => {
