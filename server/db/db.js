@@ -4,20 +4,20 @@ const { Pool } = require('pg');
 //52.53.177.10
 //13.57.47.161
 //13.57.193.100
+// const pool = new Pool({
+//   host: 'localhost',
+//   user: 'sabassegovia',
+//   port: 5432,
+//   // password: 'testpassword',
+//   database: 'productsdb'
+// })
 const pool = new Pool({
-  host: '54.219.187.82',
+  host: '54.219.145.247',
   user: 'test_user',
   port: 5432,
   password: 'testpassword',
   database: 'test'
 })
-// const pool = new Pool({
-//   host: '52.53.177.10',
-//   user: 'test_user',
-//   port: 5432,
-//   password: 'password',
-//   database: 'test'
-// })
 
 pool.connect((err, res) => {
   if (err) {
