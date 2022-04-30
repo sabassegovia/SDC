@@ -66,8 +66,8 @@ app.get(`/products/:product_id/related`, (req, res) => {
   })
 })
 
-app.get('/loaderio-969be4013b423bf9eacddcd6d00b8919.txt', (req, res) => {
-  res.status(200).send('done');
+app.get('/loaderio-969be4013b423bf9eacddcd6d00b8919', (req, res) => {
+  res.status(200).send('969be4013b423bf9eacddcd6d00b8919');
 })
 app.listen(port, () => {
   console.log('listening on port:',port )
