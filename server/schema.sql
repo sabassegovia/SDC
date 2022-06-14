@@ -80,5 +80,3 @@ CREATE INDEX styles_style_id_index ON styles(style_id);
 CREATE INDEX styles_product_id_index ON styles(product_id);
 CREATE INDEX sku_style_id_index ON styles(style_id);
 CREATE INDEX features_product_id_index ON features(product_id);
-
---ON INDEXING
